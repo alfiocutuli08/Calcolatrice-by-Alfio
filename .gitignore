@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+**/build/
+
+# Local SDK and machine-specific files
+local.properties
+
+# Android Studio / IntelliJ local workspace files
+.idea/
+*.iml
+
+# Generated Android artifacts
+captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Local IDE history/export files
+local_history.patch
+
+# OS files
+.DS_Store
+Thumbs.db

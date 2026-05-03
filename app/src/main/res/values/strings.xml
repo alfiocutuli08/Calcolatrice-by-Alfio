@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calcolatrice</string>
+    <string name="square_root_symbol">&#8730;</string>
+</resources>
