@@ -158,5 +158,112 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+        b0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numeroClick(view);
+            }
+        });
+
+    }
+
+    public void numeroClick(View view) {
+        Button b = (Button) view;
+        tvInput.append(b.getText().toString());
+    }
+
+    private void preparaOperatore(String op) {
+        if (!tvInput.getText().toString().isEmpty()) {
+            num1 = Float.parseFloat(tvInput.getText().toString());
+            operazione = op;
+            tvStorico.setText(num1 + " " + op);
+            tvInput.setText("");
+        }
+    }
+
+    private void eseguiCalcolo() {
+        float ris = 0;
+        if (operazione.equals("+")) {
+            ris = num1 + num2;
+        } else if (operazione.equals("-")) {
+            ris = num1 - num2;
+        } else if (operazione.equals("x")) {
+            ris = num1 * num2;
+        } else if (operazione.equals("/")) {
+            ris = num1 / num2;
+        } else if (operazione.equals("√")) {
+            ris = (float) Math.pow(num2, 0.5);
+        } else if (operazione.equals("^")) {
+            ris = (float) Math.pow(num1, num2);
+        } else if (operazione.equals("%")) {
+            if (num2 == 0) {
+                ris = num1 / 100;
+            } else {
+                ris = num1 * (num2 / 100);
+            }
+        }
+        tvStorico.setText(String.valueOf(ris));
+        tvInput.setText("");
     }
 }
