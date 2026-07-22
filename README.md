@@ -166,7 +166,7 @@ I chose this particular font called **dot_digital7** with a pixelated style beca
 
 Download the executable file from repository or visit the itch.io page and download the game from there.
 
-link:
+link: https://alfiocutuli08.itch.io/calculatorbyalfio
 
 # License
 
